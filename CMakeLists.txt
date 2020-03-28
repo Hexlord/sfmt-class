@@ -18,6 +18,7 @@ if(${CMAKE_INSTALL_PREFIX} MATCHES linuxbrew)
 endif()
 
 set(MEXP 19937)
+cmake_policy(SET CMP0077 NEW)
 option(BUILD_SHARED_LIBS "Build shared libraries" ON)
 add_library(${PROJECT_NAME} SFMT/SFMT.c)
 add_library(wtl::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
